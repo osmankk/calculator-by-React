@@ -1,0 +1,38 @@
+.bg-color-0 {
+  background-color: #e6e6e6;
+}
+
+
+.bg-color-1 {
+  background-color: #f0f0f0;
+}
+div.calculator div.buttons div.row button.click:hover {
+  cursor: pointer;
+  background-color: #cacaca !important;
+  
+}
+div.calculator div.buttons div.row button.click{
+  border: 1px solid  rgb(131, 122, 122) !important;
+}
+
+span:hover {
+  cursor: pointer;
+  background-color: #cacaca;
+}
+div.head{
+  border: 1px solid  rgb(131, 122, 122)
+}
+
+div.calculator {
+  width: 500px;
+  margin: 100px auto;
+  border: 1px solid  rgb(131, 122, 122);
+}
+
+
+.display {
+  height: 100px;
+  font-size: 40px;
+}
+
+
