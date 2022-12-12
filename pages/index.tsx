@@ -6,9 +6,11 @@ import Screen from '../components/Screen'
 import Bottons from '../components/Bottons'
 import React, { useState, useEffect } from "react"
 
+
 let firstDigit: boolean = true;
 
 export default function Home() {
+
   const [min, setMin] = useState(false);
   const [max, setMax] = useState(false);
   const [close, setClose] = useState(false)
@@ -61,7 +63,7 @@ export default function Home() {
       case ".":
         let displayResult;
         if (firstDigit) {
-                setOldNum(display)
+                 setOldNum(display)
                 displayResult = valueOne === "0" ? '' : valueOne
                 firstDigit = false;
                 }
@@ -70,6 +72,7 @@ export default function Home() {
                 displayResult = display + valueOne;
               }
         setDispaly(displayResult)
+        setValueOne('')
         break;
 
       case "/":
@@ -85,7 +88,9 @@ export default function Home() {
                 }
                 setOperation(valueOne);
                 firstDigit = true;
-
+                console.log(display);
+                
+               
                }
                break;
       case "←":
@@ -137,8 +142,11 @@ export default function Home() {
       }}
     >
       <Header min={min} setMin={setMin} max={max} setMax={setMax} setClose={setClose} />
+    
       <Screen min={min} max={max} display={display} setDispaly={setDispaly} />
       <Bottons min={min} max={max} setValueOne={setValueOne} />
+      
+     
     </div>
   )
 }
